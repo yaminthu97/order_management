@@ -1,0 +1,70 @@
+<?php
+
+
+namespace App\Models\Order\Base;
+
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
+
+/**
+ * Class OrderListCondModel
+ * 
+ * @package App\Models
+ */
+class OrderListCondModel extends Model
+{
+    protected $table = 'm_order_list_cond';
+    protected $primaryKey = 'm_order_list_cond_id';
+
+    /**
+     * モデルの日付カラムの保存用フォーマット
+     *
+     * @var string
+     */
+    protected $dateFormat = 'Y-m-d H:i:s';
+
+    const CREATED_AT = 'entry_timestamp';
+    const UPDATED_AT = 'update_timestamp';
+
+    /*
+     * 企業アカウントとのリレーション
+     */
+    public function account()
+    {
+        return $this->belongsTo(\App\Models\Master\Base\AccountModel::class, 'm_account_id', 'm_account_id');
+    }
+
+    /*
+     * メールテンプレートマスタとのリレーション
+     */
+    public function emailTemplates()
+    {
+        return $this->belongsTo(\App\Models\Master\Base\EmailTemplateModel::class, 'm_email_templates_id', 'm_email_templates_id');
+    }
+
+    /**
+     * 登録ユーザ
+     */
+    public function entryOperator()
+    {
+        return $this->belongsTo(\App\Models\Master\Base\OperatorModel::class, 'entry_operator_id', 'm_operators_id');
+    }
+
+    /**
+     * 更新ユーザ
+     */
+    public function updateOperator()
+    {
+        return $this->belongsTo(\App\Models\Master\Base\OperatorModel::class, 'update_operator_id', 'm_operators_id');
+    }
+
+    /**
+     * 削除ユーザ
+     */
+    public function deleteOperator()
+    {
+        return $this->belongsTo(\App\Models\Master\Base\OperatorModel::class, 'delete_operator_id', 'm_operators_id');
+    }
+
+
+}

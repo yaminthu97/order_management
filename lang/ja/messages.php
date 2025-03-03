@@ -1,0 +1,212 @@
+<?php
+
+return [
+
+    'info' => [
+        'module_started' => ':module 開始',
+        'module_completed' => ':module 完了',
+        'module_failed' => ':module 失敗',
+        'esm2_api_send_request' => 'ESM2.0へのAPIリクエスト送信(:uri)',
+        'esm2_api_receive_response' => 'ESM2.0からのAPIレスポンス受信(:uri)',
+        'esm2_api_fail_request' => 'ESM2.0へのAPIリクエスト失敗(:uri)',
+        'request_logger' => 'リクエストログ(:uri)',
+        'sql_executed' => 'SQL発行',
+        'create_completed' => ':dataを登録しました。',
+        'update_completed' => ':dataを更新しました。',
+        'update_completed2' => ':statusに更新しました。',
+        'delete_completed' => ':dataを削除しました。',
+        'process_completed' => '処理が完了しました。',
+        'notice_output_count' => ':count件出力しました。',
+        'csv_output' => 'CSV出力処理を行いました。',
+        'pdf_output' => 'PDF出力処理を行いました。',
+        'excel_output' => 'EXCEL出力処理を行いました。',
+        'zip_output' => 'ZIP出力処理を行いました。',
+        'display' => [
+            'no_data' => ':dataが見つかりません。',
+        ],
+        'shipment_schedule_result' => '出荷状況ディレクトリ(:dirlist)を読み込み、:resultcount件の出荷状況データと:subcount件の個口データを取り込みました。',
+        'shipment_schedule_result_nodata' => '出荷状況ディレクトリに取込対象のデータが存在しません。',
+        'import_batch_file_save' => '取込ファイルを保存しました。(:path)',
+        'import_batch_result' => ':total件中、:count件取り込みました。',
+        'import_batch_result_payment' => ':total件中、入金候補データへ:candidate件、入金データへ:payment件取り込みました。',
+        'import_batch_result_payment_return' => ':total件中、入金候補データへ:candidate件、入金データへ:payment件取り込みました。:return件の入金候補データを取り消しました。',
+        'import_batch_result_partial_error' => '一部エラーが発生しました。',
+    ],
+    'error' => [
+        '404_not_found' => 'ページが見つかりません。',
+        'csrf_token_mismatch' => '別の画面で登録/更新処理が行われたため、処理できません。',
+        'access_permission' => '画面権限がありません。',
+        'api_error' => 'API連携エラー',
+        'invalid_parameter' => 'パラメータが不正です。',
+        'invalid_date_format' => ':date日付フォーマットが無効です。',
+        'missing_process_date' => '新規作成の場合、処理日は必須です。',
+        'missing_date' => '再作成の場合、処理日時は必須です。',
+        'api_error_with_response_code' => 'Ecbeing APIからエラーが戻されました。 API名: :APIname、 レスポンスコード: :APIresponse',
+        'api_error_with_status_code' => 'Ecbeingとの通信に失敗しました。 API名: :APIname、 ステータスコード: :APIstatus',
+        'missing_process_date2' => ':datatype処理日は必須です。',
+        'required_parameter' => ':paramは必ず指定してください。',
+        'invalid_date_range' => ':from は :to より後の日付にすることはできません。',
+
+
+        /**
+         * 処理ごとのエラーメッセージ
+         */
+        'process_something_wrong' => ':processで異常が発生しました。',
+        'process_something_wrong2' => ':targetの:processでエラーが発生しました。', //例：入金取込候補データの登録処理でエラーが発生しました。
+        'mail_sent_process_wrong' => 'メール送信でエラーが発生しました。',
+        'connection_error' => 'システムでエラーが発生しました。',
+        'authority_error' => '削除する権限がありません。',
+        'process_failed' => ':processに失敗しました。',
+        'process_failed2' => ':processに失敗しました。サポートにお問い合わせください。',
+        'register_failed' => ':dataの登録に失敗しました。',
+        'update_failed' => ':dataの更新に失敗しました。',
+        'register_bacth_failed' => ':batchの登録に失敗しました。',
+        'upload_s3_failed' => 'AWS S3へのファイルのアップロードに失敗しました。',
+        'upload_s3_file_failed' => ':fileのAWS S3アップロードに失敗しました。',
+        'data_not_found' => ':data{:id}が見つかりません。',
+        'data_already_deleted' => ':data{:id}は既に削除されています。',
+        'mkdir_failed' => ':pathの作成に失敗しました。(ディスク名 :diskname)',
+        'putfile_failed' => ':pathの出力に失敗しました。(ディスク名 :diskname)',
+
+        'naming_pattern_duplicat' => ':naming_patternが重複しています',
+        'file_not_found_temp' => ':fileが見つかりません。',
+
+        'file_not_found' => ':fileファイルが見つかりません。（:path）',
+        'file_not_found2' =>':fileファイルが見つかりません。',
+        'data_not_found2'  => ':datatype対象のデータがありませんでした。',
+        'bill_data_not_found'  => '該当の請求情報がみつかりませんでした。',
+        'batch_already_started' => 'バッチID :id は既に起動済みです。',
+        'input_file_format_error' => '取込ファイル内容フォーマットが間違っています。',
+        'file_create_failed' => 'ローカルファイルの作成に失敗しました。',
+        'record_not_found' => '対象のレコードが存在しません。',
+        'order_search' => [
+            // 受注検索 各種操作
+
+            'no_import_file' => '取込ファイルが指定されていません',
+            'specify_import_file' => '取込ファイルは:extensionを指定してください。',
+            'failed_import_registration' => ':extension取込処理の登録に失敗しました。',
+            'failed_export_registration' => ':extension出力処理の登録に失敗しました。',
+
+            'enter_name' => ':nameを入力してください。',
+            'select_name' => ':nameを選択してください。',
+            'no_processing_row' => '処理行が指定されていません。',
+            'no_processing_target' => '処理対象がありません。',
+            'processing_failed' => '処理に失敗しました',
+            'no_output_target' => '出力対象が指定されていません。',
+            'search_results_exceeded' => '検索結果の件数が送信可能な件数(:count件)を超えています。検索条件を見直してください。',
+            'failed_output_registration' => ':batchtype出力処理の登録に失敗しました。',
+            'no_shipment_for_output' => ':batchtypeを出力可能な出荷が見つかりませんでした。',
+            'no_shipment_for_output2' => ':batchtypeを出力可能な出荷が見つかりませんでした。未出力の場合は出力を実行してください。',
+            'no_shipment_for_output3' => ':batchtypeを出力可能な出荷が見つかりませんでした。既に出力済みの場合は再出力を実行してください。',
+            'no_shipment_for_reoutput' => ':batchtypeを再出力可能な出荷が見つかりませんでした。未出力の場合は出力を実行してください。',
+        ],
+
+        'file_ooutput_error' => 'ファイルの出力に失敗しました。(:filename)',
+        // ファイルインポート
+        'impport_batch' => [
+            'invalid_parameter' => 'パラメータが不正です。:key',
+            'error_import_file' => 'ファイルの取込でエラーが発生しました。',
+            'no_import_file' => '取込ファイルが指定されていません。',
+            'file_record_error' => [
+                'column_count' => ':rownum行目の項目数が正しくありません。',
+                'column_empty' => ':rownum行目の:nameが未設定です。',
+                'column_byte_longer' => ':rownum行目の:nameに:lengthバイトを超える文字列が設定されています。',
+                'column_byte_short' => ':rownum行目の:nameに:lengthバイト未満の文字列が設定されています。',
+                'column_format' => ':rownum行目の:nameに使用できない文字が含まれています。',
+                'column_date_format' => ':rownum行目の:nameの日付形式が正しくありません。',
+                'column_fixed_length' => ':rownum行目の:nameは:length文字の固定長でなければなりません。',
+                'column_value_not_correct' => ':rownum行目の:nameが正しくありません。',
+                'length' => ':rownum行目のレコードの長さが正しくありません。',
+            ],
+            'header_record_not_found' => 'ヘッダレコードが存在しません。',
+            'trailer_record_not_found' => 'トレーラーレコードが存在しません。',
+            'end_record_not_found' => 'エンドレコードが存在しません。',
+        ],
+        'batch_error' => [
+            'not_match_param1' => '「:functype」は:batchnameバッチ実行対象外です。',
+            'not_match_param2' => '「:functype」がチェックされていない場合は、:batchnameバッチ実行対象外です。',
+            'file_not_exists' => ':fileファイルが設定されていない場合は、:batchnameバッチ実行対象外です。',
+            'data_not_found3' => ':data情報が取得できませんでした。',
+        ],
+        'template_format_error'=>'フォーマットが正しくありません。',
+        'sftp_connect_error' => 'SFTPサーバへの接続でエラーが発生しました。',
+        'download_file_not_found' => 'ダウンロードファイル（:filename）が取得できません。',
+        'download_file_copy_error' => 'ダウンロードファイルの保存に失敗しました。',
+        // 発送状況用
+        'shipment_schedule_import' => [
+            'file_record_error' => [
+                'column_count' => '(:filename) :rownum行目の項目数が正しくありません。',
+                'column_empty' => '(:filename) :rownum行目の:nameが未設定です。',
+                'column_byte_longer' => '(:filename) :rownum行目の:nameに:lengthバイトを超える文字列が設定されています。',
+                'column_date_format' => '(:filename) :rownum行目の:nameの日付形式が正しくありません。',
+                'column_value_not_correct' => '(:filename) :rownum行目の:nameが正しくありません。',
+                'column_format' => '(:filename) :rownum行目の:nameに使用できない文字が含まれています。',
+            ],
+            'result_file_not_found' => '(:filename) 出荷状況ファイルが見つかりません。',
+            'sub_data_not_join' => '(:filename) :rownum行目の個口データが出荷状況データと紐づけできません。',
+            'result_sub_file_not_found' => '(:filename) 個口ファイルが見つかりません。',
+            'deli_hdr_not_found' => '(:filename) :rownum行目の出荷基本データが取得できません。',
+            'empty_picking_date' => '(:filename) :rownum行目が出荷指示済みですが、ピッキング出力日が設定されていません。',
+            'empty_inspection_date' => '(:filename) :rownum行目が伝票発行済みまたは検品済みですが、検品日が設定されていません。',
+            'empty_decision_date' => '(:filename) :rownum行目が発送済みですが、出荷完了日が設定されていません。',
+            'empty_package_vol' => '(:filename) :rownum行目が発送済みですが、個口数が設定されていません。',
+            'empty_sub_data' => '(:filename) :rownum行目が発送済みですが、個口データが見つかりません。',
+            'other_status' => '(:filename) :rownum行目に対象外のステータスが設定されています。',
+            'order_hdr_not_found' => '(:filename) :rownum行目の受注基本データが取得できません。',
+            'order_dtl_not_found' => '(:filename) :rownum行目の受注明細データが取得できません。',
+            'backup_copy_error' => '(:path) バックアップへの退避に失敗しました。',
+            'flg_file_delete_error' => '(:path) flgファイルの削除に失敗しました。',
+            'flg_file_exists_imported' => '(:path) flgファイルが存在しますが、前回実行日時以前のデータです。',
+        ],
+        'not_create_noshi' => '熨斗ファイル名が設定されていません。',
+        'not_naming_pattern' => '名入パターンがありません。',
+        'python_failure'=>'外部プログラムの実行に失敗しました。',
+        'not_environment'=>'環境変数(:name)を定義してください。',
+        'template_format_error'=>'テンプレートファイルが:format形式ではありません。',
+        'write_file_error'=>':formatファイルを書き込みできませんでした。',
+    ],
+
+    'warning' => [
+        'process_failed_but_continue1' => ':targetの:actionに失敗しましたが、処理を継続します。',
+        'process_failed_but_continue2' => ':targetの:actionで異常が発生しましたが、処理を継続します。',
+        'no_search_criteria' => '検索条件が指定されていません。',
+        'confirm_delete' => '対応履歴を削除します。宜しいでしょうか。',
+        // ファイルインポート
+        'impport_batch' => [
+            'workdata_dupulicate' => '入金候補データを作成しましたが、オーダーIDとデータ種別が重複する入金取込データが存在しています。',
+            'orderdata_not_found' => '入金候補データを作成しましたが、対象受注データが存在しません。',
+            'candidate_exists' => '入金候補データが既に存在しています。',
+            'candidate_dupilicate' => '入金候補データを作成しましたが、既に別の入金候補データが存在しています。',
+            'candidate_dupilicate_update_payment_schedule' => '別の入金候補データが既に存在しています。振込予定日を入金データに設定しました。',
+            'payment_exists' => '入金候補データを作成しましたが、対象受注の入金データが既に存在しています。',
+            'amount_mismatch' => '入金候補データを作成しましたが、対象受注データと金額が一致しません。',
+            'payment_type_wrong' => [
+                'candidate_none' => '対象受注データの入金状態が未入金以外です。入金候補データを作成しました。',
+                'candidate_exists' => '対象受注データの入金状態が未入金以外です。入金候補データが既に存在する為、新たな入金候補データの登録はスキップします。'
+            ],
+            'order_paid' => '対象の受注データはすでに入金済みです。',
+            'candidate_deleted' => '対象の入金候補データを削除しました。',
+            'candidate_not_found' => '対象の入金候補データが存在しません。',
+            'record_type_not_covered' => ':nameが対象外のデータです。:data',
+            'invalid_record_type' => 'レコード種別が判別不能です。',
+            'invalid_return_data' => '返金レコードが確認されました。入金候補データの作成をスキップします。',
+            'invalid_column' => ':rownum行目の:nameが不正です。',
+            'shipping_label_number_not_found' => '送り状番号に紐づく送り状実績データが存在しません。'
+        ],
+    ],
+
+    'success' => [
+        'csv_input_success' => 'CSV取込への登録を行いました。',
+        'csv_output_success' => 'CSV出力への登録を行いました。',
+        'batch_success' => [
+            'process_rowcnt2' => ':rowcnt件の確認済み入金・受注修正データが処理されました。',
+            'process_rowcnt' => ':rowcnt件の確認済み出荷データが処理されました。',
+            'success_rowcnt' =>  ':rowcnt件:processしました。',
+        ],
+    ],
+
+    'mail_subject' => [
+        'expxlsx_billing_payment' => '通信販売：請求入金データバックアップのお知らせ',
+    ],
+
+];

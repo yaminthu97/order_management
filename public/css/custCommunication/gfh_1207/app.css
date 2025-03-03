@@ -1,0 +1,86 @@
+/* css/custCommunication/gfh_1207/app.css */
+
+.c-box--350{width:350px !important; box-sizing: border-box;}
+.c-box--1700{width:1700px !important; box-sizing: border-box;}
+.c-box--1700Overflow{ overflow:auto;width:1700px;}
+.c-box--850Half{ display:table-cell;padding:0 10px 0 0 ;width:850px;vertical-align:top;box-sizing: border-box;}
+.c-tbl--1700{width:1700px; box-sizing: border-box;}
+.c-tbl--1690{width:1690px; box-sizing: border-box;}
+.c-tbl--840{width:840px; box-sizing: border-box;}
+
+.c-p--200{width:200px !important;}
+.c-a--0-187{min-width:0px;max-width:187px !important;}
+.c-button-height--57{height:57px !important;}
+.nowrap-normal{white-space:normal;}
+
+.c-btn--03{ font-size: 18px; font-weight: bold; background: #337ab7; margin-bottom: 5px; padding: 13px; color: #FFF;  }
+.c-btn--03 a{
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    color:#FFF;
+    cursor: pointer;
+}
+.c-btn--03 a::before{
+    content:'－';
+    color : #000;
+    background-color:#FFF;
+    padding:5px;
+    margin-right:5px;
+    border-radius:3px;
+}
+.c-btn--03 a.collapsed::before{
+    content:'＋';
+    color : #000;
+    background-color:#FFF;
+    padding:5px;
+    margin-right:5px;
+    border-radius:3px;
+}
+.c-box-inner {
+    padding:10px;
+    border: 1px solid #ddd;
+}
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* Position above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%; /* Position arrow right at the bottom of the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}

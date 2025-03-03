@@ -1,0 +1,14 @@
+services:
+  laravel.test:
+    networks:
+      - laradock_frontend
+      - laradock_backend
+      - laradock_default
+
+networks:
+  laradock_frontend:
+    external: true
+  laradock_backend:
+    external: true
+  laradock_default:
+    external: true

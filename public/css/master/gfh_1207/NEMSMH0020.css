@@ -1,0 +1,31 @@
+.readtime-batch-setting {
+    display: block;
+}
+
+.c-box--110 {
+    display: inline;
+    width: 110px !important;
+    box-sizing: border-box;
+}
+
+
+.checkbox-container {
+    margin: 10px 0 10px 50px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 8px;
+    margin-top: 0;
+}
+
+.checkbox-container label {
+    white-space: nowrap;
+}
+
+#tabs-1 .table,#tabs-1 .d-table {
+    table-layout: fixed;
+}
+
+#tabs-1 .d-table-cell {
+    white-space: normal;
+}

@@ -1,0 +1,48 @@
+/* css/customer/gfh_1207/app.css */
+table {
+    font-size: 14px;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.p-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.icn {
+  padding-left: 10px;
+  padding-right: 0;
+  padding-top: 6px;
+}
+
+.bdr-line {
+  border-bottom: 1px solid #ddd;
+}
+
+.tooltip {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.tooltip.top .tooltip-arrow {
+  left: 50% !important;
+}
+
+.tooltip-inner {
+  left: 50% !important;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.datetime-picker input {
+    font-size: 12px;
+}
+
+.input-group-addon {
+    padding: 6px 8px;
+}

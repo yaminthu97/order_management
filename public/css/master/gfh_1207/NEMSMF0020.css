@@ -1,0 +1,35 @@
+/* Hide the original file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Style the custom button */
+.custom-file-label {
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: lightgrey;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Style the file name display */
+.file-name {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.radio-inline {
+  margin-left: 0px !important;
+  padding-left: 30px !important;
+}
+
+.td-inline {
+  padding-left: 15px !important;
+}
+
+.c-box--300 {
+    margin-left: 10px !important;;
+}

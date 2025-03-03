@@ -1,0 +1,77 @@
+/* css/customer/gfh_1207/NECSM0121.css */
+table {
+    font-size: 14px;
+}
+
+.c-btn--02 .collapsed-link {
+    font-size: 14px;
+    color: #242424 !important;
+    text-decoration: none !important;
+}
+
+.u-mb--20 {
+    margin-bottom: 20px;
+}
+
+.ml-25 {
+    margin-left: 25px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.collapse-item:last-of-type {
+    margin-bottom: 20px;
+}
+
+.btn:focus {
+    outline: none !important;
+}
+
+.c-btn--02 a {
+    position: relative;
+    padding-left: 20px;
+}
+
+.c-btn--02 a::after {
+    position: absolute;
+    left: 0;
+}
+
+.CTI_btn {
+    color: #fff !important;
+}
+
+.disabled-link {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.delete-modal {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.delete-modal .modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.delete-modal .modal-footer .btn_delete {
+    margin-left: 20px;
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+}
+
+.resize-none {
+    resize: none;
+}
+
+.ui-widget.ui-widget-content {
+    top: 300px !important;
+}

@@ -1,0 +1,30 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app/
+
+    # Level 9 is the highest level
+    level: 0
+
+    excludePaths:
+        - ./app/Http/Controllers/Common/*
+        - ./app/Modules/CustomerModule.php
+        - ./app/Modules/OrderModule.php
+        - ./app/Modules/Common/AppSyscomModule.php
+        - ./app/Modules/Common/CommonModule.php
+        - ./app/Modules/Common/LoginManager.php
+        - ./app/Modules/Common/NoticeManager.php
+        - ./app/Modules/Common/TopManager.php
+        - ./app/Models/Common/*.php
+        - ./app/Http/HttpClients/*.php
+
+#    ignoreErrors:
+#        - '#PHPDoc tag @var#'
+#
+#    excludePaths:
+#        - ./*/*/FileToBeExcluded.php
+#
+#    checkMissingIterableValueType: false

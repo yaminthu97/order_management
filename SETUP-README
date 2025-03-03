@@ -1,0 +1,37 @@
+
+esm2/laradock_local/nginx/sites/default.conf
+
+location ~ /\.ht {
+    deny all;
+}
+の上あたりに以下を追加
+
+---
+
+# Sailのlaravel.testコンテナにリクエストを転送
+location ~ ^/gfh((/)?(.+))?$ {
+    proxy_pass http://laravel.test:80;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+---
+
+sail 側で .env を .env.example からコピーし作成
+APP_KEY は laradock 側のものを使用
+
+laradock 側を一旦起動（nginxはこの時点では正常に動かない）
+
+laradock_local$ docker-compose up nginx mysql workspace phpmyadmin redis minio mailhog
+
+sail を起動
+
+sail-gfh$ ./vendor/bin/sail up -d
+
+laradock 側を停止し、再起動
+
+laradock_local$ docker-compose down
+laradock_local$ docker-compose up nginx mysql workspace phpmyadmin redis minio mailhog
+

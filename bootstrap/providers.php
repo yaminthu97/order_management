@@ -1,0 +1,22 @@
+<?php
+return [
+    App\Providers\AmiProvider::class,
+    App\Providers\AppServiceProvider::class,
+    App\Providers\CommonProvider::class,
+    App\Providers\ClaimProvider::class,
+    App\Providers\CustomerProvider::class,
+    App\Providers\GlobalCommonProvider::class,
+    App\Providers\MasterProvider::class,
+    App\Providers\OrderProvider::class,
+    App\Providers\SampleProvider::class,
+    App\Providers\ClaimProvider::class,
+    App\Providers\PaymentProvider::class,
+    App\Providers\BillingProvider::class,
+    App\Providers\Views\AmiProvider::class,
+    App\Providers\Views\CcProvider::class,
+    App\Providers\Views\CommonProvider::class,
+    App\Providers\Views\MasterProvider::class,
+    App\Providers\Views\OrderProvider::class,
+    App\Providers\Views\BillingProvider::class,
+    App\Providers\WarehouseProvider::class,
+];
